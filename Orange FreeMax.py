@@ -33,7 +33,7 @@ if(not req1.json()["SignInUserResult"]["ErrorCode"]==0):
 		print("="*60)
 		exit()
 else:
-	print("\x1b[0;31m-"*60)
+	print("="*60)
 	print("\n                 Successfully logged in\n")
 	userid=req1.json()["SignInUserResult"]["UserData"]["UserID"]
 	pass
