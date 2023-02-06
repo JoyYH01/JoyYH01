@@ -7,10 +7,10 @@ import requests
 print ("\n Dev: https://YassaHany\n\n Dev Channel: https://YassaTeam\n")
 print("="*60)
 
-pnum=input(" Enter Family Number: ")
-ppass=input(" Enter Family Passowrd: ")
-mn = input(" Enter Your Number: ")
-
+pnum=input("\n Enter Family Number: ")
+ppass=input("\n Enter Family Passowrd: ")
+mn = input("\n Enter Your Number: ")
+print()
 ur1 = 'https://services.orange.eg/SignIn.svc/SignInUser'
 
 headers ={'Content-type': 'application/json',
@@ -45,6 +45,7 @@ print()
 
 print("\n [0] For Add \n [1] For Delete\n")
 c = input(" Enter Your Choice: ")
+print()
 if c == "0":
     
     url = "https://backend.orange.eg/api/HybridFamily/ManageSharing"
