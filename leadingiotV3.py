@@ -23,7 +23,7 @@ def pro():
     url1=random.choice(purl)
     pr = requests.get(url1).text
     list =pr.split()
-    session = requests.Session()
+    session = requests
     proxie= random.choice(list)
     
     
