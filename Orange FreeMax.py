@@ -4,7 +4,8 @@ try:
 except:
     os.system("pip install requests")
 import requests
-
+print ("\n Dev: https://YassaHany\n\n Dev Channel: https://YassaTeam\n")
+print("="*60)
 
 pnum=input(" Enter Family Number: ")
 ppass=input(" Enter Family Passowrd: ")
