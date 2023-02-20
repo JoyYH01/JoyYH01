@@ -92,7 +92,7 @@ def pro():
             json_data = {
             'username': f'{user}',
             'mobile': f'12{n}',
-            'email': f'{user}@gmail.com',
+            'email': f'{user}3@gmail.com',
             'password': 'Yassa123',
             'sms': '000000',
             'verify': f'{code}',
@@ -113,7 +113,7 @@ def pro():
             elif co == "register successful":
                 print()
                 json_data3 = {
-                'username': f'{user}@gmail.com',
+                'username': f'{user}3@gmail.com',
                 'password': 'Yassa123',
                 }
                 response3 = session.post('https://m.riotblockchain.live/v1/login/index', cookies=cookies3, headers=headers, json=json_data3,timeout=ti)
