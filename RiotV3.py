@@ -81,7 +81,7 @@ def pro():
         for x in range(1):
             n=random.randint(11111111,99999999)
     
-            users=requests.get("https://raw.githubusercontent.com/JoyYH01/JoyYH01/main/names.txt").text
+            users=requests.get("https://raw.githubusercontent.com/JoyYH01/JoyYH01/main/users.txt").text
             users=users.split()
             user=random.choice(users)
             user=str(user)
