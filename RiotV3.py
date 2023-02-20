@@ -12,6 +12,8 @@ import requests,random,time
 import os
 from user_agent import generate_user_agent, generate_navigator
 from pprint import pprint
+import webbrowser
+webbrowser.open("https://t.me/YassaTean")
 
 print('\033[1;30m='*60)
 print('\033[1;33m Dev: \033[1;32mhttps://t.me/YassaHany')
@@ -140,7 +142,7 @@ def pro():
             else:
                 time.sleep(2)
                 
-for x in range(999):
+for x in range(99999):
     try:
         pro()
     except:
