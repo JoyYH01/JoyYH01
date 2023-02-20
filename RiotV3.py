@@ -13,7 +13,7 @@ import os
 from user_agent import generate_user_agent, generate_navigator
 from pprint import pprint
 import webbrowser
-webbrowser.open("https://t.me/YassaTean")
+webbrowser.open("https://t.me/YassaTeam")
 
 print('\033[1;30m='*60)
 print('\033[1;33m Dev: \033[1;32mhttps://t.me/YassaHany')
