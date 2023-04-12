@@ -5,7 +5,7 @@ url = input ("\033[1;32m Enter Domain WebSite : ")
 print ("\033[1;31m="*60)
 th = int(input("\033[1;32m Enter Number Of Threads : "))
 print ("\033[1;31m="*60)
-port = input ("\033[1;32m Enter Domain port : ")
+port =  int (input ("\033[1;32m Enter Domain port : "))
 print ("\033[1;31m="*60)
 url = socket.gethostbyname(url)
 
