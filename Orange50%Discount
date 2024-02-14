@@ -1,0 +1,60 @@
+#شغل_عيااال
+import requests
+#---------------------------------------------------------------
+pnum=input("\033[1;32m Enter Your Number: ")
+print()
+ppass=input("\033[1;32m Enter Your Pass: ")
+print()
+#---------------------------------------------------------------
+ur1 = 'https://services.orange.eg/SignIn.svc/SignInUser'
+
+headers ={'Content-type': 'application/json',
+                  'Accept': 'application/json',
+                  'User-Agent': 'Dalvik/2.1.0 (Linux; U; Android 9; Redmi Note 6 Pro MIUI/V10.3.6.0.PEKMIXM)',
+                  'Host': 'services.orange.eg',
+                  'Accept-Encoding': 'gzip'}
+
+data1 = '{"appVersion":"2.9.8","channel":{"ChannelName":"MobinilAndMe","Password":"ig3yh*mk5l42@oj7QAR8yF"},"dialNumber":"%s","isAndroid":true,"password":"%s"}' % (pnum,ppass)
+req1=requests.post(ur1,headers=headers,data=data1)
+#---------------------------------------------------------------
+if(not req1.json()["SignInUserResult"]["ErrorCode"]==0):
+	if("ip" in req1.text):
+		print("\x1b[0;31m-"*60)
+		print("\n\x1b[0;31mError Number or Password\n")
+		print("\x1b[0;31m-"*60)
+		exit()
+	else:
+		print("\x1b[0;31m-"*60)
+		print("\n\x1b[0;31mError Number or Password\n")
+		print("\x1b[0;31m-"*60)
+		exit()
+else:
+	print("\x1b[0;31m-"*60)
+	print("\n\x1b[0;33m                 Successfully logged in\n")
+	userid=req1.json()["SignInUserResult"]["UserData"]["UserID"]
+	pass
+print("\x1b[0;31m-"*60)
+print()
+#---------------------------------------------------------------
+re=requests.get("https://testing339.000webhostapp.com/Yassa-Pro.php").json()
+ctv = (re["ctv"])
+htv = (re["htv"])
+#---------------------------------------------------------------
+url = "https://services.orange.eg/APIs/Promotions/api/HashOneHash/OptIn"
+headers = {
+    "_ctv": ctv,
+    "_htv": htv,
+    "IsEasyLogin": "false",
+    "OsVersion": "7.1.2",
+    "AppVersion": "6.1.1",
+    "IsAndroid": "true",
+    "Content-Type": "application/json; charset=UTF-8",
+    "Host": "services.orange.eg",
+    "Connection": "Keep-Alive",
+    "Accept-Encoding": "gzip",
+    "User-Agent": "okhttp/3.14.9"
+}
+data = {"ChannelName":"MobinilAndMe","ChannelPassword":"ig3yh*mk5l42@oj7QAR8yF","Dial":pnum,"Language":"ar","OfferId":12,"Password":ppass}
+response = requests.post(url, headers=headers, json=data).text
+print("\033[1;32m")
+print(response)
